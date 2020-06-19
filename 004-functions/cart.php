@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 const OPERATION_EXIT = 0;
 const OPERATION_ADD = 1;
@@ -41,7 +42,7 @@ do {
 
     } while (!array_key_exists($operationNumber, $operations));
 
-    echo 'Выбрана операция: '  . $operations[$operationNumber] . PHP_EOL;
+    echo 'Выбрана операция: ' . $operations[$operationNumber] . PHP_EOL;
 
     switch ($operationNumber) {
         case OPERATION_ADD:
@@ -69,7 +70,7 @@ do {
         case OPERATION_PRINT:
             echo 'Ваш список покупок: ' . PHP_EOL;
             echo implode(PHP_EOL, $items) . PHP_EOL;
-            echo 'Всего ' . count($items) . ' позиций. '. PHP_EOL;
+            echo 'Всего ' . count($items) . ' позиций. ' . PHP_EOL;
             echo 'Нажмите enter для продолжения';
             fgets(STDIN);
             break;
