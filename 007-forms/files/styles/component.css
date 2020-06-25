@@ -53,8 +53,6 @@
     margin: 0 auto 10px;
 }
 
-.file:focus + label figure,
-.file.has-focus + label figure,
 .file + label:hover figure {
     background-color: #183657;
 }
@@ -69,10 +67,12 @@
     color: #3995d3;
 }
 
-.file:focus + label,
-.file.has-focus + label,
 .file + label:hover {
     color: #183657;
+}
+
+.file + label:hover figure {
+    background-color: #183657;
 }
 
 .file_name {
@@ -89,7 +89,7 @@
     color: #ffffff;
 }
 
-.file_name::placeholder{
+.file_name::placeholder {
     color: #ffffff;
 }
 
@@ -105,7 +105,7 @@ button {
 
 }
 
-button:hover {
+button:hover,
+.file_name:hover {
     background-color: #183657;
-    outline: none;
 }
